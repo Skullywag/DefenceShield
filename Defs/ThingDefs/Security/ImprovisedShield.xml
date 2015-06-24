@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+  <ThingDef Name="BuildingBase" Abstract="True">
+    <category>Building</category>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <selectable>true</selectable>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>ImprovisedShield</defName>
+    <label>Improvised Shield</label>
+    <thingClass>DefenceShield.Building_DefenceShield</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Security/OmniShield</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawsize>2,2</drawsize>
+    </graphicData>
+    <altitudeLayer>Waist</altitudeLayer>
+    <statBases>
+      <MaxHitPoints>140</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <WorkToMake>2500</WorkToMake>
+      <Beauty>-30</Beauty>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <comps>
+      <li>
+        <compClass>CompExplosive</compClass>
+        <explosiveRadius>3.9</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+      </li>
+      <li>
+        <compClass>CompForbiddable</compClass>
+      </li>
+      <li>
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>500</basePowerConsumption>
+      </li>
+    </comps>
+    <description>An improvised shield, uses a few linked personal shields to create an area effect shield. Explodes when damaged.</description>
+    <size>(1,1)</size>
+    <passability>Impassable</passability>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>0.4</fillPercent>
+    <hasTooltip>true</hasTooltip>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costStuffCount>20</costStuffCount>
+    <costList>
+      <Steel>80</Steel>
+      <Apparel_PersonalShield>2</Apparel_PersonalShield>
+    </costList>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <combatTargetBuilding>true</combatTargetBuilding>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <designationCategory>Security</designationCategory>
+    <specialDisplayRadius>4</specialDisplayRadius>
+    <designationHotKey>U</designationHotKey>
+  </ThingDef>
+
+</ThingDefs>

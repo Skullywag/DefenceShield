@@ -1,0 +1,5 @@
+C:\Users\mjsku_000\Desktop\RimWorldAlpha11Win\RimWorld834Win\Mods\DefenceShield\Source\DefenceShield\bin\Debug\DefenceShield.dll
+C:\Users\mjsku_000\Desktop\RimWorldAlpha11Win\RimWorld834Win\Mods\DefenceShield\Source\DefenceShield\bin\Debug\DefenceShield.pdb
+C:\Users\mjsku_000\Desktop\RimWorldAlpha11Win\RimWorld834Win\Mods\DefenceShield\Source\DefenceShield\obj\Debug\DefenceShield.csprojResolveAssemblyReference.cache
+C:\Users\mjsku_000\Desktop\RimWorldAlpha11Win\RimWorld834Win\Mods\DefenceShield\Source\DefenceShield\obj\Debug\DefenceShield.dll
+C:\Users\mjsku_000\Desktop\RimWorldAlpha11Win\RimWorld834Win\Mods\DefenceShield\Source\DefenceShield\obj\Debug\DefenceShield.pdb
