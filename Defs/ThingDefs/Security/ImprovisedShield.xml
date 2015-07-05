@@ -62,7 +62,6 @@
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <designationCategory>Security</designationCategory>
     <specialDisplayRadius>4</specialDisplayRadius>
-    <designationHotKey>U</designationHotKey>
   </ThingDef>
 
 </ThingDefs>
