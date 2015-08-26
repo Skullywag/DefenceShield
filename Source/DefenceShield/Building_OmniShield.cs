@@ -30,13 +30,12 @@ namespace DefenceShield
 		private static readonly SoundDef SoundReset = SoundDef.Named("PersonalShieldReset");
         protected CompPowerTrader powerComp;
         private List<IntVec3> squares = new List<IntVec3>();
-        private Material currentMatrialColour;
         public float angle = 0;
         public void DrawTurret()
         {
             if (this.powerComp.PowerOn)
             {
-                angle += 0.26f;
+                angle += energy / 1f;
                 Vector3 s = new Vector3(1f, 1f, 1f);
                 s.y = Altitudes.AltitudeFor(AltitudeLayer.VisEffects);
                 Matrix4x4 matrix = default(Matrix4x4);
@@ -45,6 +44,7 @@ namespace DefenceShield
             }
             else
             {
+                angle += energy / 1f;
                 Matrix4x4 matrix = default(Matrix4x4);
                 Vector3 s = new Vector3(1f, 1f, 1f);
                 s.y = Altitudes.AltitudeFor(AltitudeLayer.MoteLow);
@@ -67,7 +67,7 @@ namespace DefenceShield
             public override GizmoResult GizmoOnGUI(Vector2 topLeft)
             {
                 Rect rect = new Rect(topLeft.x, topLeft.y, Width, 75f);
-                Widgets.DrawWindow(rect);
+                Widgets.DrawWindowBackground(rect);
                 Rect rect2 = GenUI.ContractedBy(rect, 6f);
                 Rect rect3 = rect2;
                 rect3.height = rect.height / 2f;
@@ -125,7 +125,7 @@ namespace DefenceShield
 		{
 			get
 			{
-                return (this.powerComp != null && this.powerComp.PowerOn) && (this.ShieldState == ShieldState.Active);
+                return energy > 0;
 			}
 		}
 		public override void ExposeData()
@@ -139,7 +139,14 @@ namespace DefenceShield
 		public override void Tick()
 		{
 			base.Tick();
-            if (this.powerComp != null && this.powerComp.PowerOn)
+            if ((this.powerComp == null || !this.powerComp.PowerOn) && this.energy > 0)
+            {
+                if (Find.TickManager.TicksGame % 60 == 0)
+                {
+                    energy -= 0.01f;
+                }
+            }
+            if ((this.powerComp != null && this.powerComp.PowerOn) || this.energy > 0)
             {
                 if (this.ShieldState == ShieldState.Resetting)
                 {
@@ -175,11 +182,14 @@ namespace DefenceShield
                                 break;
                             }
                         }
-                        this.energy += this.EnergyGainPerTick;
-                        if (this.energy > this.EnergyMax)
+                        if (this.powerComp != null && this.powerComp.PowerOn)
                         {
-                            this.energy = this.EnergyMax;
-                        }
+                            this.energy += this.EnergyGainPerTick;
+                            if (this.energy > this.EnergyMax)
+                            {
+                                this.energy = this.EnergyMax;
+                            }
+                        }                      
                     }
                 }
             }
