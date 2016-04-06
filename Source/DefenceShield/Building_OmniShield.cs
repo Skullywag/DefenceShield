@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
-using System.Text;
 using UnityEngine;
 using Verse;
 using Verse.Sound;
 using RimWorld;
+using Combat_Realism;
+
 namespace DefenceShield
 {
 	internal class Building_DefenceShield : Building

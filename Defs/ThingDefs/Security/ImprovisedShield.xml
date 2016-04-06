@@ -3,6 +3,7 @@
 
   <ThingDef Name="BuildingBase" Abstract="True">
     <category>Building</category>
+    <thingClass>Building</thingClass>
     <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
     <selectable>true</selectable>
     <drawerType>MapMeshAndRealTime</drawerType>
@@ -20,7 +21,11 @@
       <texPath>Things/Building/Security/OmniShield</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawsize>2,2</drawsize>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
     </graphicData>
+    <uiIconPath>Things/Building/Security/OmniShieldUI</uiIconPath>
     <altitudeLayer>Waist</altitudeLayer>
     <statBases>
       <MaxHitPoints>140</MaxHitPoints>
@@ -30,20 +35,21 @@
     </statBases>
     <tickerType>Normal</tickerType>
     <comps>
-      <li>
-        <compClass>CompExplosive</compClass>
+      <li Class="CompProperties_Explosive">
         <explosiveRadius>3.9</explosiveRadius>
         <explosiveDamageType>Bomb</explosiveDamageType>
       </li>
       <li>
         <compClass>CompForbiddable</compClass>
       </li>
-      <li>
+      <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
         <basePowerConsumption>500</basePowerConsumption>
       </li>
+      <li Class="CompProperties_Breakdownable"/>
+      <li Class="CompProperties_Flickable" />
     </comps>
-    <description>An improvised shield, uses a few linked personal shields to create an area effect shield. Explodes when damaged.</description>
+    <description>An improvised shield, uses a few linked personal shields and some power, to create an area effect shield. Explodes when damaged.</description>
     <size>(1,1)</size>
     <passability>Impassable</passability>
     <castEdgeShadows>true</castEdgeShadows>
@@ -56,12 +62,18 @@
     <costList>
       <Steel>80</Steel>
       <Apparel_PersonalShield>2</Apparel_PersonalShield>
+      <Components>3</Components>
     </costList>
+    <building>
+      <ai_combatDangerous>true</ai_combatDangerous>
+    </building>
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
-    <combatTargetBuilding>true</combatTargetBuilding>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <designationCategory>Security</designationCategory>
     <specialDisplayRadius>4</specialDisplayRadius>
+    <researchPrerequisites>
+      <li>ShieldTech</li>
+    </researchPrerequisites>
   </ThingDef>
 
 </ThingDefs>
