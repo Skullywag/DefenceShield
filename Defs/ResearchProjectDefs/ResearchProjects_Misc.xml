@@ -5,10 +5,16 @@
 		<defName>ShieldTech</defName>
 		<label>shield technology</label>
 		<description>Allows the construction of improvised are defence shields.</description>
-		<totalCost>1200</totalCost>
+    <baseCost>1200</baseCost>
+    <techLevel>Spacer</techLevel>
     <prerequisites>
       <li>MicroelectronicsBasics</li>
+      <li>VitalsMonitor</li>
     </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
 	</ResearchProjectDef>
 
 </ResearchProjectDefs>

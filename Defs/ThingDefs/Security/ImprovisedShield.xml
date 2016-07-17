@@ -26,7 +26,7 @@
       </damageData>
     </graphicData>
     <uiIconPath>Things/Building/Security/OmniShieldUI</uiIconPath>
-    <altitudeLayer>Waist</altitudeLayer>
+    <altitudeLayer>Building</altitudeLayer>
     <statBases>
       <MaxHitPoints>140</MaxHitPoints>
       <Flammability>1.0</Flammability>
@@ -62,7 +62,7 @@
     <costList>
       <Steel>80</Steel>
       <Apparel_PersonalShield>2</Apparel_PersonalShield>
-      <Components>3</Components>
+      <Component>3</Component>
     </costList>
     <building>
       <ai_combatDangerous>true</ai_combatDangerous>

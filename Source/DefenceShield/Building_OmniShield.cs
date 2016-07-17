@@ -4,10 +4,10 @@ using UnityEngine;
 using Verse;
 using Verse.Sound;
 using RimWorld;
-using Combat_Realism;
 
 namespace DefenceShield
 {
+    [StaticConstructorOnStartup]
 	internal class Building_DefenceShield : Building
 	{
 		private const float MinDrawSize = 1.2f;

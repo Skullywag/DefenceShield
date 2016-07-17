@@ -2,6 +2,6 @@
 <ModMetaData>
 	<name>DefenceShield</name>
 	<author>Skullywag</author>
-	<targetVersion>Alpha 13</targetVersion>
+	<targetVersion>0.14.1232</targetVersion>
 	<description>Adds static shield emplacements to defend against incoming projectiles.</description>
 </ModMetaData>
