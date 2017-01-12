@@ -61,3 +61,34 @@ C:\Users\mjsku\Desktop\RimWorld1232WinDev\Mods\DefenceShield\Source\DefenceShiel
 C:\Users\mjsku\Desktop\RimWorld1232WinDev\Mods\DefenceShield\Source\DefenceShield\obj\Debug\DefenceShield.csprojResolveAssemblyReference.cache
 C:\Users\mjsku\Desktop\RimWorld1232WinDev\Mods\DefenceShield\Source\DefenceShield\obj\Debug\DefenceShield.dll
 C:\Users\mjsku\Desktop\RimWorld1232WinDev\Mods\DefenceShield\Source\DefenceShield\obj\Debug\DefenceShield.pdb
+C:\Users\mjsku\Desktop\RimWorldAlpha15cWin\RimWorld1284Win\Mods\DefenceShield\Source\DefenceShield\bin\Debug\DefenceShield.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha15cWin\RimWorld1284Win\Mods\DefenceShield\Source\DefenceShield\bin\Debug\DefenceShield.pdb
+C:\Users\mjsku\Desktop\RimWorldAlpha15cWin\RimWorld1284Win\Mods\DefenceShield\Source\DefenceShield\bin\Debug\Assembly-CSharp.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha15cWin\RimWorld1284Win\Mods\DefenceShield\Source\DefenceShield\bin\Debug\UnityEngine.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha15cWin\RimWorld1284Win\Mods\DefenceShield\Source\DefenceShield\bin\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha15cWin\RimWorld1284Win\Mods\DefenceShield\Source\DefenceShield\bin\Debug\NAudio.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha15cWin\RimWorld1284Win\Mods\DefenceShield\Source\DefenceShield\bin\Debug\NVorbis.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha15cWin\RimWorld1284Win\Mods\DefenceShield\Source\DefenceShield\obj\Debug\DefenceShield.csprojResolveAssemblyReference.cache
+C:\Users\mjsku\Desktop\RimWorldAlpha15cWin\RimWorld1284Win\Mods\DefenceShield\Source\DefenceShield\obj\Debug\DefenceShield.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha15cWin\RimWorld1284Win\Mods\DefenceShield\Source\DefenceShield\obj\Debug\DefenceShield.pdb
+C:\Users\mjsku\Desktop\RimWorldAlpha15cWin\RimWorld1284Win\Mods\DefenceShield - A15c\Source\DefenceShield\bin\Debug\DefenceShield.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha15cWin\RimWorld1284Win\Mods\DefenceShield - A15c\Source\DefenceShield\bin\Debug\DefenceShield.pdb
+C:\Users\mjsku\Desktop\RimWorldAlpha15cWin\RimWorld1284Win\Mods\DefenceShield - A15c\Source\DefenceShield\bin\Debug\Assembly-CSharp.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha15cWin\RimWorld1284Win\Mods\DefenceShield - A15c\Source\DefenceShield\bin\Debug\UnityEngine.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha15cWin\RimWorld1284Win\Mods\DefenceShield - A15c\Source\DefenceShield\bin\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha15cWin\RimWorld1284Win\Mods\DefenceShield - A15c\Source\DefenceShield\bin\Debug\NAudio.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha15cWin\RimWorld1284Win\Mods\DefenceShield - A15c\Source\DefenceShield\bin\Debug\NVorbis.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha15cWin\RimWorld1284Win\Mods\DefenceShield - A15c\Source\DefenceShield\obj\Debug\DefenceShield.csprojResolveAssemblyReference.cache
+C:\Users\mjsku\Desktop\RimWorldAlpha15cWin\RimWorld1284Win\Mods\DefenceShield - A15c\Source\DefenceShield\obj\Debug\DefenceShield.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha15cWin\RimWorld1284Win\Mods\DefenceShield - A15c\Source\DefenceShield\obj\Debug\DefenceShield.pdb
+C:\Users\mjsku\Desktop\RimWorldAlpha16Win\RimWorld1393Win\Mods\DefenceShield - A16\Source\DefenceShield\bin\Debug\DefenceShield.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha16Win\RimWorld1393Win\Mods\DefenceShield - A16\Source\DefenceShield\bin\Debug\DefenceShield.pdb
+C:\Users\mjsku\Desktop\RimWorldAlpha16Win\RimWorld1393Win\Mods\DefenceShield - A16\Source\DefenceShield\bin\Debug\Assembly-CSharp.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha16Win\RimWorld1393Win\Mods\DefenceShield - A16\Source\DefenceShield\bin\Debug\UnityEngine.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha16Win\RimWorld1393Win\Mods\DefenceShield - A16\Source\DefenceShield\bin\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha16Win\RimWorld1393Win\Mods\DefenceShield - A16\Source\DefenceShield\bin\Debug\NAudio.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha16Win\RimWorld1393Win\Mods\DefenceShield - A16\Source\DefenceShield\bin\Debug\NVorbis.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha16Win\RimWorld1393Win\Mods\DefenceShield - A16\Source\DefenceShield\bin\Debug\UnityEngine.xml
+C:\Users\mjsku\Desktop\RimWorldAlpha16Win\RimWorld1393Win\Mods\DefenceShield - A16\Source\DefenceShield\obj\Debug\DefenceShield.csprojResolveAssemblyReference.cache
+C:\Users\mjsku\Desktop\RimWorldAlpha16Win\RimWorld1393Win\Mods\DefenceShield - A16\Source\DefenceShield\obj\Debug\DefenceShield.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha16Win\RimWorld1393Win\Mods\DefenceShield - A16\Source\DefenceShield\obj\Debug\DefenceShield.pdb

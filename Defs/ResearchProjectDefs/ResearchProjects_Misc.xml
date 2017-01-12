@@ -9,7 +9,7 @@
     <techLevel>Spacer</techLevel>
     <prerequisites>
       <li>MicroelectronicsBasics</li>
-      <li>VitalsMonitor</li>
+      <li>GunTurrets</li>
     </prerequisites>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
     <requiredResearchFacilities>

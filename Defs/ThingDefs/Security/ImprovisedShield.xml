@@ -30,7 +30,7 @@
     <statBases>
       <MaxHitPoints>140</MaxHitPoints>
       <Flammability>1.0</Flammability>
-      <WorkToMake>2500</WorkToMake>
+      <WorkToBuild>2500</WorkToBuild>
       <Beauty>-30</Beauty>
     </statBases>
     <tickerType>Normal</tickerType>

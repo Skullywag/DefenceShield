@@ -51,6 +51,7 @@ namespace DefenceShield
                 Graphics.DrawMesh(MeshPool.plane10, matrix, Building_DefenceShield.ShieldRotator, 0);
             }
         }
+        [StaticConstructorOnStartup]
         internal class Gizmo_PersonalShieldStatus : Gizmo
         {
             public Building_DefenceShield shield;
@@ -83,9 +84,9 @@ namespace DefenceShield
                 return new GizmoResult(0);
             }
         }
-        public override void SpawnSetup()
+        public override void SpawnSetup(Map map)
         {
-            base.SpawnSetup();
+            base.SpawnSetup(Find.VisibleMap);
             this.powerComp = base.GetComp<CompPowerTrader>();
         }
 		private float EnergyMax
@@ -195,11 +196,11 @@ namespace DefenceShield
 		}
         private void ProtectSquare(IntVec3 square)
         {
-            if (!square.InBounds())
+            if (!square.InBounds(Map))
             {
                 return;
             }
-            List<Thing> list = Find.ThingGrid.ThingsListAt(square);
+            List<Thing> list = Find.VisibleMap.thingGrid.ThingsListAt(square);
             List<Thing> list2 = new List<Thing>();
             int i = 0;
             int num = list.Count<Thing>();
@@ -221,11 +222,10 @@ namespace DefenceShield
                             Quaternion b2 = Quaternion.LookRotation(exactPosition - b);
                             if (Quaternion.Angle(exactRotation, b2) > 90f)
                             {
-                                MoteThrower.ThrowLightningGlow(projectile.ExactPosition, 0.5f);
-                                Building_DefenceShield.SoundAbsorbDamage.PlayOneShot(projectile.Position);
+                                MoteMaker.ThrowLightningGlow(projectile.ExactPosition, Map, 0.5f);
+                                Building_DefenceShield.SoundAbsorbDamage.PlayOneShot(new TargetInfo(projectile.Position, base.Map, false));
                                 int damageAmountBase = projectile.def.projectile.damageAmountBase;
-                                BodyPartDamageInfo value = new BodyPartDamageInfo(null, null);
-                                DamageInfo dinfo = new DamageInfo(projectile.def.projectile.damageDef, damageAmountBase, projectile, projectile.ExactRotation.eulerAngles.y, new BodyPartDamageInfo?(value), null);
+                                DamageInfo dinfo = new DamageInfo(projectile.def.projectile.damageDef, damageAmountBase, projectile.ExactRotation.eulerAngles.y, null, null, null);
                                 this.AbsorbedDamage(dinfo);
                                 list2.Add(projectile);
                                 if (!this.ShouldDisplay)
@@ -276,21 +276,21 @@ namespace DefenceShield
 		}
 		private void Break()
 		{
-            Building_DefenceShield.SoundBreak.PlayOneShot(this.Position);
-			MoteThrower.ThrowStatic(this.TrueCenter(), ThingDefOf.Mote_ExplosionFlash, 12f);
-			for (int i = 0; i < 6; i++)
-			{
-				Vector3 loc = this.TrueCenter() + Vector3Utility.HorizontalVectorFromAngle((float)Rand.Range(0, 360)) * Rand.Range(0.3f, 0.6f);
-				MoteThrower.ThrowDustPuff(loc, Rand.Range(0.8f, 1.2f));
-			}
-			this.energy = 0f;
-			this.ticksToReset = this.StartingTicksToReset;
-		}
-		private void Reset()
+            Building_DefenceShield.SoundBreak.PlayOneShot(new TargetInfo(base.Position, base.Map, false));
+            MoteMaker.MakeStaticMote(this.TrueCenter(), this.Map, ThingDefOf.Mote_ExplosionFlash, 12f);
+            for (int i = 0; i < 6; i++)
+            {
+                Vector3 loc = this.TrueCenter() + Vector3Utility.HorizontalVectorFromAngle((float)Rand.Range(0, 360)) * Rand.Range(0.3f, 0.6f);
+                MoteMaker.ThrowDustPuff(loc, this.Map, Rand.Range(0.8f, 1.2f));
+            }
+            this.energy = 0f;
+            this.ticksToReset = this.StartingTicksToReset;
+        }
+        private void Reset()
 		{
-            Building_DefenceShield.SoundReset.PlayOneShot(this.Position);
-			MoteThrower.ThrowLightningGlow(this.TrueCenter(), 3f);
-			this.ticksToReset = -1;
+            Building_DefenceShield.SoundReset.PlayOneShot(new TargetInfo(base.Position, base.Map, false));
+            MoteMaker.ThrowLightningGlow(this.TrueCenter(), this.Map, 3f);
+            this.ticksToReset = -1;
 			this.energy = this.EnergyOnReset;
 		}
 		public override void Draw()
